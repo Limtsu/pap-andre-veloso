@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/slick.css" />
+    <title>ForJuda - PAP</title>
+
+    <script>
+        function passvalues() {
+            var titulopostagem=document.getElementById("titulopost").value;
+            localStorage.setItem("textvalue", titulopostagem);
+            var conteudopostagem=document.getElementById("contpostagem").value;
+            localStorage.setItem("textvalue", conteudopostagem);
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <header class="menu-principal">
+        <main>
+            <div class="header-1">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./img/logo.png" style="padding: 2.5px;"/>
+                    </a>
+                </div>
+                <div class="redes-sociais" style="padding-top: 3px; float: right; margin-top: 13px;">
+                    <ul>
+                        <li>
+                            <a href="https://www.epnazare.eu/">
+                                <img src="./img/rss.png" style="height: 23px"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/EPNazare">
+                                <img src="./img/face.png" style="height: 23px"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/Epnazar1">
+                                <img src="./img/tw.png" style="height: 23px"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dawdaw.html">
+                                <img src="./img/linkedin.png" style="height: 23px"/>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </header>
+    <main class="col-100 menu-urls">
+        <div class="header-2">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Postagens</a>
+                    </li>
+                    <li>
+                        <a href="sobrenos.html">Sobre Nós</a>
+                    </li>
+                    <li>
+                        <a href="ajuda.html">Serviços de Ajuda</a>
+                    </li>
+                    <li>
+                        <a href="colaboradores.html">Colaboradores</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <main>
+    <div class="container" style="text-align:center; margin-top: 100px">
+    <php>
+        <b> Título da Postagem: </b>
+        <br>
+        <input type="text" name="titulo1" id="titulopost" style="height:23px; width:500px"><br>
+        <br>
+        <b> Conteúdo da Postagem: </b>
+        <br>
+        <input type="text" name="conteudo1" id="contpostagem" style="height: 308px; width: 986px; margin-bottom: 50px"><br>
+
+    </php>
+    <a href="index.html" class="confirmar botao2"> 
+        Criar a postagem
+    </a>
+    </div>
+
+    </main>
+</body>
+
+</html>
