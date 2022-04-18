@@ -1,15 +1,16 @@
 <?php
 
-if(isset($_POST['submit']))
-{
+    if(isset($_POST['submit']))
+    {
+        session_start();
         include_once('config.php');
 
-        $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['passworde'];
 
-        $result = mysqli_query($conexao, "INSERT INTO utilizadores(email, passworde, username) 
-        VALUES ('$email','$password','$username')");
+
+        $result = mysqli_query($conexao, "INSERT INTO utilizadores(email, passworde) 
+        VALUES ('$email', '$password')");
 
         header('Location: index.html');
     }
@@ -66,7 +67,7 @@ if(isset($_POST['submit']))
             </div>
     </header>
     <form action="registar.php" method="POST" data-multi-step class="multi-step-form">
-        <div class="card" data-step>
+        <div class="card" data-step style="max-width:400px">
             <fieldset>
                 <legend class="step-title">Efetue o registo</legend>
                 <br>
@@ -80,17 +81,12 @@ if(isset($_POST['submit']))
                     <label for="passworde" class="labelInput">Senha</label>
                 </div>
                 <br>
-                <div class="form-floating">
-                    <input type="text" name="username" id="username" class="form-control" required>
-                    <label for="username" class="labelInput">Username</label>
-                </div>
-                <br>
                 <input class="btn btn-lg btn-primary" type="submit" name="submit" id="submit" style="display: flex; margin: auto;">
             </fieldset>
         </div>
     </form>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 

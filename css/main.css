@@ -3,43 +3,51 @@ width: 100%;
 height: 100%;
 margin: 0 auto;
 }
+
 ul {
    padding: 0px!important; 
 }
+
 .menu-principal {
 width: 100%;
 background-color: #252323;
 height: 58px;
 }
+
 main, .content {
 margin: 0 auto;
 width: 980px;
 position: relative;
 }
+
 .logo {
  float: left;
  width: 70%;
 }
+
 .redes-sociais ul li {
 margin-left: 25px;
 display: inline-block;
 float: left;
 list-style: none;
 }
+
 .redes-sociais {
 width: 25%;
 float: revert;
 }
+
 .header-2 {
 background-color: #ffffff;
 width: 980px;
 margin: 0 auto;
-padding: 16px;
 }
+
 .menu-urls {
-height: 80px;
+height: 66px;
 border-bottom: 3px solid #efefef;
 }
+
 .menu ul li {
     display: inline-block;
     color: #8b8b8b;
@@ -309,6 +317,7 @@ cursor: pointer;
         float: right;
         -webkit-transition-duration: 0.4s;
         transition-duration: 0.4s;
+        border:0;
 }
 .botao2:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
@@ -368,7 +377,7 @@ cursor: pointer;
     border: 1px solid #333;
     border-radius: .5rem;
     padding: .5rem;
-    max-width: 400px;
+    max-width: inherit;
     margin: 0 auto;
     animation: fade 250ms ease-in-out forwards;
   }
@@ -471,4 +480,24 @@ cursor: pointer;
   
 .form-floating{
     margin:5px;
+}
+
+.post {
+    width:70%;
+    margin: 0 auto;
+    background-color: #DDD;
+    margin-top:100px;
+    border-radius: 5px;
+    
+}
+
+.titulo {
+    color: black;
+    text-align: left;
+}
+
+.conteudo {
+    color:black;
+    text-align: left;
+    padding-bottom:100px;
 }

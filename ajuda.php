@@ -1,3 +1,17 @@
+<?php
+    session_start();
+
+    include_once('config.php');
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['passworde']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['passworde']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['email'];
+
+?>
+
 <html>
 
 <head>
@@ -11,12 +25,12 @@
     <header class="menu-principal">
         <main>
             <div class="header-1">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="./img/logo.png" style="padding: 2.5px;"/>
-                    </a>
+                <div style="float: right; color:white">
+                    <?php
+                        echo "<h3>Bem vindo, $logado</h3>";
+                    ?>
                 </div>
-                <div class="redes-sociais" style="padding-top: 3px; float: right;">
+                <div class="redes-sociais" style="padding-top: 3px;">
                     <ul>
                         <li>
                             <a href="https://www.epnazare.eu/">
@@ -43,35 +57,43 @@
             </div>
         </main>
     </header>
-
     <main class="col-100 menu-urls">
         <div class="header-2">
             <div class="menu">
                 <ul>
                     <li>
-                        <a href="index.html">Início</a>
+                        <a href="indexregistado.php">Início</a>
                     </li>
                     <li>
-                        <a href="sobrenos.html">Sobre Nós</a>
+                        <a href="sobrenos.php">Sobre Nós</a>
                     </li>
                     <li>
-                        <a href="ajuda.html">Serviços de Ajuda</a>
+                        <a href="ajuda.php">Serviços de Ajuda</a>
                     </li>
                     <li>
-                        <a href="colaboradores.html">Colaboradores</a>
+                        <a href="colaboradores.php">Colaboradores</a>
                     </li>
                 </ul>
             </div>
         </div>
     </main>
-
-    <div class="container" style="width:70%; margin:auto; margin-top:100px;">
-        <h3>Já pensou ir a um psicólogo mas quando olhou para o custo ou reparou que não tinha tempo teve de esquecer a ideia? Quer uma forma de aliviar o que sente de forma rápida, sem compromisso e grátis? É isso mesmo que o meu projeto visa trazer. Eu quero criar um site onde possam haver diferentes grupos onde diferentes pessoas possam se juntar e falar sobre o seu problema ou apenas ler sobre alguém que enfrenta algo parecido a eles mesmos. Algo simples e fácil de utilizar e que consiga abranger múltiplas pessoas.</h3>
-
-        <img src="./img/dialogoajuda.png" style="width: inherit; display: flex; margin: 0 auto; max-width: 900px; max-height: 700px; padding: 16px;"/>
-
+    
+    <div style="text-align: center; margin-top:100px; font-family:sans-serif;">
+        <h2>SOS VOZ AMIGA</h2>
+        <h3>Horário: Diariamente das 15:30 às 00:30<br>Contacto Telefónico: 213 544 545 | 912 802 669 | 963 524 660</h3> 
+        <br>
+        <h2>CONVERSA AMIGA</h2>
+        <h3>Horário: 15:00 – 22:00<br>Contacto Telefónico: 808 237 327 | 210 027 159</h3>
+        <br>
+        <h2>VOZES AMIGAS DE ESPERANÇA DE PORTUGAL</h2>
+        <h3>Horário: 16:00 – 22:00<br>Contacto Telefónico: 222 030 707</h3>
+        <br>
+        <h2>TELEFONE DA AMIZADE</h2>
+        <h3>Horário: 16:00 – 23:00<br>Contacto Telefónico: 222 080 707</h3>
+        <br>
+        <h2>VOZ DE APOIO</h2>
+        <h3>Horário: 21:00 – 24:00<br>Contacto Telefónico: 225 506 070<br> Email: sos@vozdeapoio.pt</h3>
     </div>
-
 
 </body>
 

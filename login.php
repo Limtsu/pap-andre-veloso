@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html>
 
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/slick.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">    
     <title>ForJuda - PAP</title>
-
 
 </head>
 
@@ -47,18 +48,18 @@
     </header>
 
     <div class="container" style="margin-top: 100px;">
-        <form action="testLogin.php" method="POST" class="multi-step-form">
-            <div class="card" style="animation: none">
-                <h3 class="step-title">Por favor insira os deus dados de login</h3>
+        <form action="scriptLogin.php" method="POST" class="multi-step-form">
+            <div class="card" style="animation: none; max-width:400px">
+                <h3 class="step-title">Por favor insira os seus dados de login</h3>
                 <br>
                 <div class="form-floating">
-                    <input class="form-control" type="text" name="email">
+                    <input class="form-control" type="text" name="email" required>
                     <label for="email" class="labelInput">Email</label>
                 </div>
                 <br>
                 <div class="form-floating">
-                    <input class="form-control" type="password" name="passworde">
-                    <label for="email" class="labelInput">Password</label>
+                    <input class="form-control" type="password" name="passworde" required>
+                    <label for="passworde" class="labelInput">Password</label>
                 </div>
                 <br>
                 <input class="btn btn-lg btn-primary" type="submit" name="submit" value="Login" style="width:50%; margin:auto">
